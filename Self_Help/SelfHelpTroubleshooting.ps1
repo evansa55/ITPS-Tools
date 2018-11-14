@@ -1,5 +1,6 @@
 $Adaptors = Get-NetAdapter
 $Gateway = Get-NetRoute | where {$_.DestinationPrefix -eq '0.0.0.0/0'}
+Clear-Host
 foreach($adaptor in $Adaptors){
 
 	if(($adaptor.mediaconnectionstate) -eq 'Connected'){
